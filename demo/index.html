@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Form validator</title>
+	<link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet" />
+	<link href="../lib/adapters/validator.bootstrap.css" rel="stylesheet" />
+	<link href="css/style.css" rel="stylesheet" />
+</head>
+<body>
+	<form action="" id="form">
+		<div class="row">
+			<fieldset class="form-group col-md-2">
+				<label for="first-name">First name:</label>
+				<input type="text" name="firstName" class="form-control input-medium first-name" id="first-name" />
+			</fieldset>
+		</div>
+		<div class="row">
+			<fieldset class="form-group col-md-2">
+				<button type="submit" class="btn btn-primary">Submit</button>
+				<div class="submit-feedback-container"></div>
+			</fieldset>
+		</div>
+	</form>
+
+	<script id="alert-template" type="text/x-jquery-tmpl">
+		<div class="alert alert-${type} fade-in">
+			{{html content}}
+		</div>
+	</script>
+
+	<script type="text/javascript" src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+	<script type="text/javascript" src="//netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="../lib/validator.js"></script>
+	<!--Bootstrap adapter-->
+	<script type="text/javascript" src="../lib/adapters/validator.bootstrap.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>

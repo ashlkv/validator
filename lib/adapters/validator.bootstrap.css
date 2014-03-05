@@ -1,0 +1,30 @@
+.tooltip.error.bottom .tooltip-arrow {
+	border-bottom-color: #FF002F;
+}
+.tooltip.error.top .tooltip-arrow {
+	border-top-color: #FF002F;
+}
+.tooltip.error.left .tooltip-arrow {
+	border-left-color: #FF002F;
+}
+.tooltip.error.right .tooltip-arrow {
+	border-right-color: #FF002F;
+}
+.tooltip.error .tooltip-inner {
+	background: #FF002F;
+	padding-top: 7px;
+	padding-bottom: 7px;
+}
+input.error, select.error, textarea.error,
+input.error:focus, select.error:focus, textarea.error:focus {
+	color: #cc0028;
+	border-color: #cc0028;
+}
+input.error:focus, select.error:focus, textarea.error:focus,
+input.error:hover, select.error:hover, textarea.error:hover {
+	-webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 8px #ff002f;
+	-moz-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 8px #ff002f;
+	-o-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 8px #ff002f;
+	-ms-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 8px #ff002f;
+	box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.1), 0 0 8px #ff002f;
+}
