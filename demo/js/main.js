@@ -7,7 +7,6 @@ ValidatorDemo.Form = function (data) {
 ValidatorDemo.Form.prototype.validate = function ($form) {
 	var $firstName = $('[name="firstName"]', this.$element);
 	// Resetting the validator
-	// TODO Now with namespaced events do we need to reset validator at all?
 	Validator.reset($form);
 
 	// First name must be specified
