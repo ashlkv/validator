@@ -14,6 +14,7 @@ ValidatorDemo.Form.prototype.validate = function ($form) {
 };
 ValidatorDemo.Form.prototype.submit = function ($form) {
 	var $alertContainer = $('.submit-feedback-container', this.$element);
+	ValidatorDemo.hideAlert();
 	try {
 		this.validate($form);
 	}
@@ -22,18 +23,18 @@ ValidatorDemo.Form.prototype.submit = function ($form) {
 		return;
 	}
 
-	ValidatorDemo.Tools.showAlert({content: '<i class="glyphicon glyphicon-ok"></i> OK'}, $alertContainer);
+	ValidatorDemo.showAlert({content: '<i class="glyphicon glyphicon-ok"></i> OK'}, $alertContainer);
 };
-
-ValidatorDemo.Tools = {
-	showAlert: function (options, $container) {
+ValidatorDemo.showAlert = function (options, $container) {
 		var $alert,
 				  templateId = 'alert-template';
 		options = $.extend({}, options);
-		$alert = Tools.Template.render(templateId, options);
+		$alert = $(('<div class="alert alert-{type} fade-in"></div>').replace('{type}', options.type)).html(options.content);
 		$container.find('.alert').remove();
 		$container.append($alert);
-	}
+};
+ValidatorDemo.hideAlert = function () {
+	$('.alert').hide();
 };
 
 (function(){

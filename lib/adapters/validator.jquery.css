@@ -1,0 +1,57 @@
+.tooltip {
+	position: absolute;
+	z-index: 1030;
+	display: block;
+	visibility: visible;
+	font-size: 12px;
+	line-height: 1.4;
+	opacity: 0;
+	max-width: 200px;
+	padding: 3px 8px;
+	color: #fff;
+	text-align: center;
+	text-decoration: none;
+	background-color: #000;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	-o-border-radius: 4px;
+	-ms-border-radius: 4px;
+	border-radius: 4px;
+	-webkit-transition: opacity .15s linear;
+	-moz-transition: opacity .15s linear;
+	-o-transition: opacity .15s linear;
+	-ms-transition: opacity .15s linear;
+	transition: opacity .15s linear;
+}
+.tooltip.bottom {
+	margin-top: 3px;
+}
+.tooltip.in {
+	opacity: .9;
+}
+.tooltip.error {
+	background: #FF002F;
+}
+.tooltip:before {
+	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-color: transparent;
+	border-style: solid;
+}
+.tooltip.bottom:before {
+	top: -5px;
+	left: 50%;
+	margin-left: -5px;
+	border-width: 0 5px 5px;
+	border-bottom-color: #000;
+}
+.tooltip.error.bottom:before {
+	border-bottom-color: #FF002F;
+}
+input.error, select.error, textarea.error,
+input.error:focus, select.error:focus, textarea.error:focus {
+	color: #cc0028;
+	border-color: #cc0028;
+}
